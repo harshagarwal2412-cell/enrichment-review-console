@@ -1,0 +1,46 @@
+class_id,sample_no,sku,product,current_value,proposed_value,citation,citation_tier
+volt,1,HBL5361,Hubbell 20A duplex receptacle,125 volts,125 V,"Hubbell spec sheet HBL5361.pdf, p.1",1
+volt,2,EAT-BR120,Eaton BR single-pole breaker,120V AC,120 V,"Eaton catalog BR-series, table 3",1
+volt,3,SQD-QO115,Square D QO 15A breaker,120/240 Volts,120/240 V,Schneider QO spec 0730CT9201,1
+mfr,1,SQD-QO120,QO 20A breaker,SQ. D,Square D,schneider-electric.com brand registry,1
+mfr,2,SQD-HOM230,Homeline 30A 2-pole,SCHNEIDER/SQUARE-D,Square D,schneider-electric.com brand registry,1
+mfr,3,THN-3502,Thomas & Betts 1/2 in connector,T&B,ABB Installation Products,abb.com brand history page,1
+nema,1,HOF-A1210,Hoffman wall-mount enclosure,NEMA-12,NEMA 12,nVent Hoffman A-series catalog p.44,1
+nema,2,HOF-A16148,Hoffman wash-down enclosure,4x,NEMA 4X,nVent Hoffman spec A16148SS6,1
+nema,3,CRS-EDS271,Crouse-Hinds junction box,Type 3R Rainproof,NEMA 3R,Eaton Crouse-Hinds EDS datasheet,1
+awg,1,SOU-58021,Southwire THHN stranded,#12 AWG,12 AWG,southwire.com THHN spec sheet,1
+awg,2,SOU-11587,Southwire NM-B 14/2,14ga,14 AWG,southwire.com NM-B product page,1
+awg,3,ENC-C1102,Encore XHHW-2 copper,No. 10,10 AWG,Encore Wire XHHW-2 datasheet,1
+amp,1,EAT-BR230,Eaton BR 30A 2-pole,—,30 A,"Eaton BR catalog, ratings table row 14",1
+amp,2,SQD-QO260,QO 60A 2-pole,—,60 A,"Schneider 0730CT9201, table 2",1
+amp,3,SIE-Q2100,Siemens QP 100A 2-pole,—,100 A,"Siemens QP datasheet, p.2",1
+weight,1,HOF-A1210,Hoffman wall-mount enclosure,5.4 kg,11.90 lb,nVent Hoffman A-series catalog p.44,1
+weight,2,CRS-EDS271,Crouse-Hinds junction box,"1,240 g",2.73 lb,Eaton Crouse-Hinds EDS datasheet,1
+weight,3,HBL5361,Hubbell duplex receptacle,0.19 lbs.,0.19 lb,Hubbell spec sheet HBL5361.pdf,1
+upc,1,SOU-58021,Southwire THHN stranded,03278958021,032789580219,GS1 GTIN registry lookup,1
+upc,2,SIE-Q2100,Siemens QP 100A 2-pole,78362117694,783621176941,Siemens packaging artwork,1
+upc,3,HBL5361,Hubbell duplex receptacle,78367820663,783678206630,GS1 GTIN registry lookup,1
+conduit,1,ALL-58012,Allied EMT conduit,"3/4""",0.75 in (trade),Allied Tube EMT catalog p.7,1
+conduit,2,ALL-58014,Allied EMT conduit,1-1/4 inch,1.25 in (trade),Allied Tube EMT catalog p.7,1
+conduit,3,THN-3502,T&B EMT connector,one half,0.50 in (trade),"ABB TB catalog, fittings section",1
+schema,1,ALL-58012,Allied EMT conduit,Outside Diameter 0.922 in,Diameter 0.922 in,Allied Tube EMT catalog p.7,1
+schema,2,CAR-E942H,Carlon PVC elbow,Width 1.05 in,Diameter 1.05 in,Carlon PVC fittings guide,1
+schema,3,SOU-58021,Southwire THHN stranded,O.D. 0.130 in,Diameter 0.130 in,southwire.com THHN spec sheet,1
+temp,1,SOU-58021,Southwire THHN stranded,90°C,90°C dry / 75°C wet,Spec sheet p.1 vs. catalog table 4,1
+temp,2,ENC-C1102,Encore XHHW-2 copper,75°C,90°C dry / 75°C wet,Encore datasheet vs. 2025 catalog,1
+temp,3,SOU-11587,Southwire NM-B 14/2,60°C,60°C (NM-B terminated),NEC 334.80 vs. conductor rating,1
+material,1,HOF-A16148SS6,Hoffman wash-down enclosure,—,316 Stainless Steel,Inferred from suffix SS6 in part number,2
+material,2,HOF-A1210CHNFSS,Hoffman hinged enclosure,—,304 Stainless Steel,Inferred from suffix SS in description,2
+material,3,CAR-E942H,Carlon PVC elbow,—,PVC,Inferred from product line name,2
+desc,1,HBL5361,Hubbell duplex receptacle,412 chars,Truncate at last full clause ≤240,Generated from 15 enriched attributes,2
+desc,2,HOF-A1210,Hoffman wall-mount enclosure,388 chars,Truncate at last full clause ≤240,Generated from 12 enriched attributes,2
+desc,3,SQD-QO115,Square D QO 15A breaker,301 chars,Truncate at last full clause ≤240,Generated from 14 enriched attributes,2
+coo,1,SIE-Q2100,Siemens QP 100A 2-pole,—,Mexico,"Amazon listing, seller-supplied field",3
+coo,2,ALL-58012,Allied EMT conduit,—,USA,"Distributor webstore, uncited",3
+coo,3,CAR-E942H,Carlon PVC elbow,—,USA,"Marketplace listing, seller-supplied",3
+unspsc,1,HOF-A1210,Hoffman wall-mount enclosure,—,39121608,"Model output, no source document",3
+unspsc,2,THN-3502,T&B EMT connector,—,39121409,"Model output, no source document",3
+unspsc,3,ALL-58014,Allied EMT conduit,—,39121701,"Model output, no source document",3
+ul,1,CRS-EDS271,Crouse-Hinds junction box,—,UL 1203 listed,Marketing page; not in UL Product iQ,2
+ul,2,HOF-A16148SS6,Hoffman wash-down enclosure,—,CSA Type 4X,Marketing page; CSA register no match,2
+ul,3,ENC-C1102,Encore XHHW-2 copper,—,UL 44 listed,Marketing page; file number absent,2

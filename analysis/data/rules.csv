@@ -1,0 +1,31 @@
+class_id,action,rule_text
+volt,accept,"NORMALIZE Voltage → ""{n} V"" WHERE source.tier = 1 AND corroboration ≥ 2"
+volt,demote,HOLD Voltage WHERE source = manufacturer_pdf — manual review required
+mfr,accept,MAP Manufacturer VIA alias_table WHERE exact_match; ELSE route to review
+mfr,demote,HOLD Manufacturer — alias table must be re-approved before auto-mapping
+nema,accept,SNAP Enclosure Rating → NEMA enum WHERE exact enum member; ELSE demote
+nema,demote,HOLD Enclosure Rating — enum coercion disabled
+awg,accept,"NORMALIZE Conductor Size → ""{n} AWG""; route kcmil separately"
+awg,demote,HOLD Conductor Size — manual review required
+amp,accept,ACCEPT Ampacity WHERE 2 independent spec tables return the same figure
+amp,demote,HOLD Ampacity — PDF table extraction not trusted for this catalog
+weight,accept,"CONVERT Shipping Weight → lb, 2dp, WHERE source figure is cited"
+weight,demote,HOLD Shipping Weight — conversions require steward sign-off
+upc,accept,ACCEPT UPC WHERE GTIN-12 check digit validates; ELSE hold
+upc,demote,HOLD UPC — all barcode writes require steward sign-off
+conduit,accept,"NORMALIZE Trade Size → decimal in, retain trade designation"
+conduit,demote,HOLD Trade Size — manual review required
+schema,accept,"MERGE {Diameter, Outside Diameter, Width} → Diameter for conduit & conductor families"
+schema,route,ESCALATE schema collision to taxonomy owner before any write
+temp,accept,"SPLIT Temperature Rating → {dry, wet}; block single-value writes"
+temp,route,ESCALATE conflicting ratings to the product data owner
+material,accept,ACCEPT inferred Enclosure Material WHERE part-number suffix is in the mapped set
+material,route,ESCALATE inferred materials — no write without a spec source
+desc,accept,"TRUNCATE Long Description at last full clause ≤ channel limit {ERP 240, EDI 80}"
+desc,route,ESCALATE description policy to the channel owner
+coo,accept,"OVERRIDE — Country of Origin accepted from tier-3 source (logged, reversible)"
+coo,route,NEVER auto-accept Country of Origin below source tier 1 — owner: trade compliance
+unspsc,accept,"OVERRIDE — uncited UNSPSC codes written (logged, reversible)"
+unspsc,route,NEVER write UNSPSC without a source document — owner: catalog manager
+ul,accept,"OVERRIDE — unverified safety listings published (logged, reversible)"
+ul,route,NEVER publish a safety listing absent from the certifying register — owner: compliance

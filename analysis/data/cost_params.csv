@@ -1,0 +1,4 @@
+param,value
+sec_per_row,9
+sec_per_class,240
+audit_rate,0.02

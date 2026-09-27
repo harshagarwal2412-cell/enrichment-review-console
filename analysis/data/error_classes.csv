@@ -1,0 +1,16 @@
+class_id,lane,field,failure_mode,source,source_tier,corroborating_sources,values_count,title
+volt,auto,Voltage,unit-format,Manufacturer spec PDF,1,3,1842,Voltage strings normalized to a single unit form
+mfr,auto,Manufacturer,entity-alias,Internal alias table + mfr site,1,2,1204,Manufacturer aliases collapsed to the canonical entity
+nema,auto,Enclosure Rating,enum-drift,Manufacturer spec PDF,1,2,946,NEMA enclosure ratings snapped to the published enum
+awg,auto,Conductor Size,unit-format,Manufacturer spec PDF,1,2,733,Conductor sizes normalized to AWG notation
+amp,auto,Ampacity,pdf-table-extract,Manufacturer spec PDF,1,2,1105,Ampacity extracted from spec-sheet rating tables
+weight,auto,Shipping Weight,unit-convert,Manufacturer spec PDF,1,2,612,Weights converted to pounds at two decimals
+upc,auto,UPC,checksum,GS1 / manufacturer packaging,1,2,488,11-digit UPCs padded and check-digit validated
+conduit,auto,Trade Size,unit-format,Manufacturer catalog,1,2,402,Conduit trade sizes normalized to decimal inches
+schema,review,Diameter / Width / OD,schema-collision,Mixed manufacturer sheets,1,1,918,Three source fields competing for one catalog attribute
+temp,review,Temperature Rating,source-conflict,Spec sheet vs. print catalog,1,0,264,Two tier-1 sources disagree on the same rating
+material,review,Enclosure Material,no-citation,Product description text,2,0,377,"Material inferred from the description, not read from a source"
+desc,review,Long Description,channel-format,Generated from enriched attributes,2,0,1530,Descriptions exceed the ERP field limit and need a truncation policy
+coo,hold,Country of Origin,untrusted-source,Third-party marketplace listing,3,0,311,Country of origin scraped from a marketplace listing
+unspsc,hold,UNSPSC Code,model-generated,No citation,3,0,209,Classification codes generated with no source document
+ul,hold,Safety Listing,unverified-claim,Manufacturer marketing page,2,0,146,UL / CSA listings not found on the certifying body's register
